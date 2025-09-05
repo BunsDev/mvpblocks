@@ -218,4 +218,3 @@ export async function generateMetadata(props: {
   });
 }
 
-export const runtime = "edge"

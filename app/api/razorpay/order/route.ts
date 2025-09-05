@@ -1,7 +1,7 @@
 import Razorpay from 'razorpay';
 import { NextResponse } from 'next/server';
 
-export const runtime = "edge"
+
 
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY!,

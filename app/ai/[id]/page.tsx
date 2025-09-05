@@ -15,4 +15,3 @@ export default async function AIGenPage({
   )
 }
 
-export const runtime = "edge"

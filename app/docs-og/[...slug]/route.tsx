@@ -2,7 +2,7 @@
 import { generateOGImage } from '@/lib/generateOGImage';
 import { metadataImage } from '@/lib/metadata-image';
 
-export const runtime = "edge"
+
 
 export const GET = metadataImage.createAPI(async (page) => {
   return generateOGImage({

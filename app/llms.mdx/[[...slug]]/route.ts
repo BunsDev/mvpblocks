@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLLMText } from '@/lib/getllmstext';
 import { source } from '@/lib/source';
 
-export const runtime = "edge"
+
 
 export async function GET(
   _req: NextRequest,
