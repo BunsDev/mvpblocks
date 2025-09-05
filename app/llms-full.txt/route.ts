@@ -1,8 +1,6 @@
 import { source } from '@/lib/source';
 import { getLLMText } from '@/lib/getllmstext';
 
-export const revalidate = false;
-
 export async function GET() {
   const scan = source.getPages().map(getLLMText);
   const scanned = await Promise.all(scan);

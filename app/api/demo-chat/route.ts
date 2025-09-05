@@ -7,7 +7,7 @@ import {
 } from 'ai';
 
 export const maxDuration = 30;
-export const revalidate = false;
+export const runtime = "edge"
 
 export async function POST(req: Request) {
   try {
