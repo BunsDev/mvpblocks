@@ -1,6 +1,7 @@
 import { streamText, UIMessage, convertToModelMessages } from 'ai';
 import z from 'zod';
 
+export const runtime = "edge"
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 

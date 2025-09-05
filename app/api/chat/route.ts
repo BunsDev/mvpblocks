@@ -12,7 +12,7 @@ import { registry } from '@/registry';
 import { z } from 'zod';
 
 export const maxDuration = 30;
-export const revalidate = false;
+export const runtime = "edge"
 
 const getComponentCode = async (item: any) => {
   if (!item || !item.files || item.files.length === 0) {

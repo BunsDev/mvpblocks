@@ -217,3 +217,5 @@ export async function generateMetadata(props: {
     title: page.data.title,
   });
 }
+
+export const runtime = "edge"
