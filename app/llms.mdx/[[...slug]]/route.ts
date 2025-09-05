@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLLMText } from '@/lib/getllmstext';
 import { source } from '@/lib/source';
 
-
+export const runtime = 'edge';
 
 export async function GET(
   _req: NextRequest,
@@ -18,8 +18,4 @@ export async function GET(
   }
 
   return new NextResponse(await getLLMText(page));
-}
-
-export function generateStaticParams() {
-  return source.generateParams();
 }

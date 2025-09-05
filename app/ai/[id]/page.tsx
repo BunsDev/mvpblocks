@@ -1,5 +1,7 @@
 import AiGenerationComponent from "@/components/ai/AiGenerationComponent";
 
+export const runtime = 'edge';
+
 export default async function AIGenPage({
   params
 }: {

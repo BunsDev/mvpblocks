@@ -19,7 +19,6 @@ import { AutoTypeTable } from 'fumadocs-typescript/ui';
 import { siteConfig } from '@/config/site';
 import { LLMCopyButton, ViewOptions } from '@/components/important/Actions';
 import { createGenerator } from 'fumadocs-typescript';
-import { metadataImage } from '@/lib/metadata-image';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -200,21 +199,4 @@ Add any other context or screenshots about the feature request here.`)}`}
   );
 }
 
-export async function generateStaticParams() {
-  return source.generateParams();
-}
-
-export async function generateMetadata(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
-  const params = await props.params;
-  const page = source.getPage(params.slug);
-
-  if (!page) return {};
-
-  return metadataImage.withImage(page.slugs, {
-    description: page.data.description,
-    title: page.data.title,
-  });
-}
-
+export const runtime = 'edge'
